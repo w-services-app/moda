@@ -25,24 +25,14 @@
     transition: width 1s ease-in-out;
 
 }
-.jumbotron .top_right1 {
-    margin-top: -32px;
-    margin-right: 95px;
-}
-.jumbotron .top_right1 p {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: Myriad Pro, serif;
-    color: #9c0013;
-    font-size: 30pt ;
-    line-height: 14px;
-}
+
+
 .header_form_div{
     margin-top: 120px;
     margin-right: 80px;
     background-color: rgba(213, 201, 143, 0.7);
     background: rgba(213, 201, 143, 0.7);
-    color: rgba(213, 201, 143, 0.7);
+    /*    color: rgba(213, 201, 143, 0.7);*/
     width: 340px;
     padding: 10px;
     box-sizing: border-box;
@@ -64,6 +54,20 @@
     box-shadow: 5px 5px 5px #eeeeee;
 
 }
+/*
+.jumbotron .top_right1 {
+    margin-top: -32px;
+    margin-right: 95px;
+}
+ .jumbotron .top_right1 p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Myriad Pro, serif;
+    color: #9c0013;
+    font-size: 30pt ;
+    line-height: 14px;
+}
+*/
 .bootom_left {
     margin-left: 124px;
     margin-top: 370px;
@@ -89,6 +93,22 @@
         position: fixed;
         right: 30px;
         bottom: 30px;
+    }
+    .jumbotron .header_form_div .line1 {
+        color: #9a0113;
+        font-size: 18pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    .jumbotron .header_form_div .line2 {
+        color: #080808;
+        font-size: 13pt;
+        font-weight: lighter;
+        text-align: center;
+    }
+    .confrm {
+        color:#080808;
+        font-size: 9px;
     }
     .back_top span {
         font-size: 60px;
