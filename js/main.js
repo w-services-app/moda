@@ -76,7 +76,7 @@ $(".header_send").click(function () {
     var name = $(this).parents(".header_form").find(".name");
     var email = $(this).parents(".header_form").find(".email");
     var messages = $(this).parents(".header_form").find(".messages");
-
+    
     $(this).val("Обработка...");
     $.ajax({
         type: 'POST',
@@ -85,17 +85,20 @@ $(".header_send").click(function () {
             'name': name.val(),
             'email': email.val(),
             'messages': messages.val()
-//                    'check': check.val()
         },
         dataType: 'json',
         success: $.proxy(function (data) {
 
             if (data.error === false) {
-                $(".response").removeClass("alert-danger").addClass("alert-info").html(data.response);
-                name.val('');
-                email.val('');
-                messages.val('');
-                check.removeAttr("checked")
+                $(".header_form_div small").remove()
+                $(".header_form").replaceWith("<div class='alert message alert-info' id='response' role='alert'>" + data.response + "</div>");
+
+                //$(".response").removeClass("alert-danger").addClass("alert-info").html(data.response);
+
+                // name.val('');
+                // email.val('');
+                // messages.val('');
+                // check.removeAttr("checked")
             } else {
                 $(".response").removeClass("alert-info").addClass("alert-danger").show('slow').html(data.response);
             }
@@ -112,6 +115,8 @@ $(".footer_send").click(function () {
     var name = $(this).parents(".footer_form").find(".name");
     var email = $(this).parents(".footer_form").find(".email");
     var messages = $(this).parents(".footer_form").find(".messages");
+    var razmer = $(this).parents(".footer_form").find(".razmer");
+    var color = $(this).parents(".footer_form").find(".color");
 
     $(this).val("Обработка...");
     $.ajax({
@@ -120,18 +125,23 @@ $(".footer_send").click(function () {
         data: {
             'name': name.val(),
             'email': email.val(),
-            'messages': messages.val()
-//                    'check': check.val()
+            'messages': messages.val(),
+            'razmer': razmer.val(),
+            'color': color.val()
+            //'check': check.val()
         },
         dataType: 'json',
         success: $.proxy(function (data) {
-
             if (data.error === false) {
-                $(".response_footer").removeClass("alert-danger").addClass("alert-info").html(data.response);
-                name.val('');
-                email.val('');
-                messages.val('');
-                check.removeAttr("checked")
+                $(".footer_form_div small").remove()
+                $(".footer_form").replaceWith("<div class='alert message alert-info' id='response' role='alert'>" + data.response + "</div>");
+
+                //$(".response").removeClass("alert-danger").addClass("alert-info").html(data.response);
+
+                // name.val('');
+                // email.val('');
+                // messages.val('');
+                // check.removeAttr("checked")
             } else {
                 $(".response_footer").removeClass("alert-info").addClass("alert-danger").show('slow').html(data.response);
             }
