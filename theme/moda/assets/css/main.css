@@ -1,0 +1,230 @@
+#bg{
+    background: transparent url('../img/bg1800x625.jpg');/* Сокращённая форма записи (background-size: cover; лучше писать отдельно) */
+    background-color: transparent;
+    background-image: url('../img/bg1800x625.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; /*НЕ РАБОТАЕТ В IE НИЖЕ 9 ВЕРСИИ*/
+    width:100%;
+    height:100%;
+    min-height:625px;
+}
+.promo {
+    background: transparent url('../img/promo1200.jpg');/* Сокращённая форма записи (background-size: cover; лучше писать отдельно) */
+    background-color: transparent;
+    background-image: url('../img/promo1200.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; /*НЕ РАБОТАЕТ В IE НИЖЕ 9 ВЕРСИИ*/
+    width:100%;
+    height:100%;
+    min-height:369px;
+}
+#home {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.logo {
+    width: 100%;
+    overflow:hidden;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+
+}
+
+
+.header_form_div{
+    margin-top: 120px;
+    margin-right: 80px;
+    background-color: rgba(213, 201, 143, 0.7);
+    background: rgba(213, 201, 143, 0.7);
+    /*    color: rgba(213, 201, 143, 0.7);*/
+    width: 340px;
+    padding: 10px;
+    box-sizing: border-box;
+    border:solid 2px #555555;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    -moz-box-shadow: 5px 5px 5px #eeeeee;
+    -webkit-box-shadow: 5px 5px 5px #eeeeee;
+    box-shadow: 5px 5px 5px #eeeeee;
+
+}
+/*
+.jumbotron .top_right1 {
+    margin-top: -32px;
+    margin-right: 95px;
+}
+ .jumbotron .top_right1 p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Myriad Pro, serif;
+    color: #9c0013;
+    font-size: 30pt ;
+    line-height: 14px;
+}
+*/
+.bootom_left {
+    margin-left: 124px;
+    margin-top: 370px;
+}
+.jumbotron .bootom_left p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Myriad Pro, serif;
+    color: #9c0013;
+    font-size: 19px;
+    line-height: 14px;
+}
+
+.promo .heder {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #040404;
+    text-align: center;
+}
+.pre_promo * {
+    display: block;
+}
+.pre_promo .header_desk {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #040404;
+}
+.pre_promo .description {
+    font-size: 13px;
+    color: #040404;
+}
+.pre_promo .price {
+    font-size: 17px;
+}
+.promo .thumbnail {
+    background-color: transparent;
+    border: 0px;
+}
+.promo img {
+    border: 1px solid #c20d0a;
+    -moz-topleft: 5px;
+    -webkit-border-radius:5px;
+    border-radius:65px;
+    -webkit-box-shadow: 6px 7px 9px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    6px 7px 9px 3px rgba(0, 0, 0, 0.75);
+    box-shadow:         6px 7px 9px 3px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+.promo .row .caption {
+    font-size: 10px;
+    color: #040404;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .promo .pre_promo div {
+        margin-left: 85% !important;
+    } 
+}
+@media screen and (min-width: 1024px){
+    .logo {
+        width: 250px;
+    }
+    #otzivi img{
+        height: 140px;
+        min-width: 140px;
+    }
+    .back_top {
+        display: none;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+    }
+    .jumbotron .header_form_div .line1 {
+        color: #9a0113;
+        font-size: 18pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    .jumbotron .header_form_div .line2 {
+        color: #080808;
+        font-size: 13pt;
+        font-weight: lighter;
+        text-align: center;
+    }
+    .confrm {
+        color:#080808;
+        font-size: 9px;
+    }
+    .promo .pre_promo div{
+        width: 320px !important;
+        margin-left: 47%;
+
+        text-align: left  !important;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        .promo .pre_promo div{margin-left: 85%;} 
+    }
+    .promo .promo_img{
+        margin-right: 5%;
+    }
+    .promo .promo_img div{
+        max-width: 150px;
+        text-align: center;
+        box-shadow: none;
+    }
+
+
+    .back_top span {
+        font-size: 60px;
+        color: #b92c28;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    #bg{
+        background-image: url('../img/bg800x500.jpg');
+    }
+    .promo{
+        background-image: url('../img/promo800.jpg');
+    }
+    .promo .row {
+        margin-right: 0px;
+    }
+    .promo .row div{
+        text-align: center
+    }
+    #otzivi img{
+        height: 80px;
+        min-width: 80px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .promo{
+        background-image: url(../img/promo640.jpg)
+    }
+}
+@media screen and (max-width:400px){
+    #bg{
+        background-position: 35% center;
+    }
+    .promo{
+        background-image: url(../img/promo340.jpg)
+    }
+}
