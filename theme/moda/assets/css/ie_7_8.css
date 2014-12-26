@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22.12.2014, 12:56:52
+    Author     : Олег
+*/
+
+		
+.header_form_div {
+       background:transparent;
+       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80D5C98F,endColorstr=#80D5C98F);
+       zoom: 1;
+}
+.browsehappy{
+    position:fixed;
+    background-color: #9c0013;
+    background: #9c0013;
+    padding: 25px;
+    width: 100%;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 25px;
+}
+.browsehappy a {
+    font-weight: 900;
+    color: #EBEBEB;
+    text-decoration: underline;
+}
+.browsehappy a:hover {
+    text-decoration: none;
+}
+#home {
+    display: none
+}

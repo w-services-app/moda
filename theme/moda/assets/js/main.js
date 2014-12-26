@@ -109,7 +109,7 @@ $(".header_send").click(function () {
 
 });
 
-//Отправка формы и обработка формы в хедере блок banner
+//Отправка формы и обработка формы в блок footer
 $(".response_footer").hide("slow");
 $(".footer_send").click(function () {
     var name = $(this).parents(".footer_form").find(".name");
@@ -121,7 +121,7 @@ $(".footer_send").click(function () {
     $(this).val("Обработка...");
     $.ajax({
         type: 'POST',
-        url: 'ajax/footer_form_conttroler_ajax.php',
+        url: 'theme/moda/ajax/footer_form_conttroler_ajax.php',
         data: {
             'name': name.val(),
             'email': email.val(),

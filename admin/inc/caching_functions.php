@@ -35,6 +35,15 @@ function getPageContent($page,$field='content'){
 	}
 	echo $content;
 }
+function getPageTitle($page,$field='title'){   
+	$thisfile = file_get_contents(GSDATAPAGESPATH.$page.'.xml');
+	$data = simplexml_load_string($thisfile);
+	$content = stripslashes(htmlspecialchars_decode($data->$field, ENT_QUOTES));
+	if ($field=='title'){
+		$content = exec_filter('content',$content);
+	}
+	echo $content;
+}
 
 /**
  * Get Page Field

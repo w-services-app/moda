@@ -12,31 +12,37 @@ $color = isset($_POST["color"]) ? trim($_POST["color"]) : "";
 
 $response = '';
 $error = false;
+$debug =  ' DEBUG <br/> '
+            . '$name: ' . $name . '<br/>'
+            . '$email: ' . $email . '<br/>' 
+            . '$messages: ' . $messages . '<br/>'
+            . '$razmer: ' . $razmer . '<br/>'
+            . '$color: ' . $color . '<br/>';
 
 if ($name == '') {
     $error = TRUE;
-    $response = 'Вы забыли указать Ваше Имя';
+    $response = 'Вы забыли указать Ваше Имя' . $debug;
 }
 
 if ($email === '') {
     $error = true;
-    $response = 'Пожалуйста, укажите Ваше э-маил.';
+    $response = 'Пожалуйста, укажите Ваше э-маил.' . $debug;
 } else {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = true;
-        $response = 'E-mail "' . $email . '" указан не верно.';
+        $response = 'E-mail "' . $email . '" указан не верно.' . $debug;
     }
 }
 
 if ($messages == '') {
     $error = TRUE;
-    $response = 'Вы забыли написать сообщение';
+    $response = 'Вы забыли написать сообщение' . $debug;
 }
 
 
 if ($razmer == 'not-select') {
     $error = TRUE;
-    $response = 'Вы забыли указать размер платья.';
+    $response = 'Вы забыли указать размер платья.' . $debug;
 }
 if ($color == 'not-select') {
     $error = TRUE;
@@ -44,7 +50,7 @@ if ($color == 'not-select') {
 }
 
 if (!$error) {
-    $response = 'Ваше сообщение успешно отправлено. С вами свяжутся в течении 24-х часов.';
+    $response = 'Ваше сообщение успешно отправлено. С вами свяжутся в течении 24-х часов.' . $debug;
 }
 
 $data = array(
